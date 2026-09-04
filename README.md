@@ -11,7 +11,7 @@ This repository is the org site at [lazy-senior-dev.github.io](https://lazy-seni
 | Persona | Status | One line | Measured on | Install |
 |---|---|---|---|---|
 | [grumpy-reviewer](https://github.com/lazy-senior-dev/grumpy-reviewer) | live | The staff engineer who reviews every write before it reaches your branch. *Show me where it breaks.* | defects caught before commit | `/plugin marketplace add lazy-senior-dev/grumpy-reviewer` then `/plugin install grumpy-reviewer@lazy-senior-dev` |
-| [paranoid-sre](https://github.com/lazy-senior-dev/paranoid-sre) | coming soon | The on-call engineer who asks how it fails after deploy. *It works. Now tell me how it fails.* | incidents prevented per rollout | watch the org |
-| [tenured](https://github.com/lazy-senior-dev/tenured) | coming soon | Has been here longer than the monorepo and remembers the postmortem. *We tried that in 2017.* | repeated outages avoided | watch the org |
+| [paranoid-sre](https://github.com/lazy-senior-dev/paranoid-sre) | live | The on-call engineer who asks how it fails after deploy. *It works. Now tell me how it fails.* | incidents prevented per rollout | watch the org |
+| [tenured](https://github.com/lazy-senior-dev/tenured) | live | Has been here longer than the monorepo and remembers the postmortem. *We tried that in 2017.* | repeated outages avoided | watch the org |
 
 Everything here is Apache-2.0; keep the NOTICE file when you redistribute. Built and maintained by [Sandeep Bazar](https://www.linkedin.com/in/sandeepbazar/). The same table is meant to be copied into the org profile README when that repository is created.
