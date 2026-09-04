@@ -1,0 +1,14 @@
+# private context, tool scratch, secrets
+.private/
+*.local.md
+.env
+.env.*
+.DS_Store
+node_modules/
+*.log
+.claude/
+.codex/
+.cursor/*
+!.cursor/rules/
+CLAUDE.md
+AGENTS.local.md
