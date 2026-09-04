@@ -1,0 +1,15 @@
+# lazy-senior-dev.github.io
+
+The front door for [lazy-senior-dev](https://github.com/lazy-senior-dev): persona plugins that make an AI coding agent behave like a specific senior engineer with a specific job. Ponytail showed that a character changes an agent's behaviour more than a list does; this org builds the rest of the room, one persona per repository, each benchmarked on the number that engineer cares about.
+
+This repository is the org site at [lazy-senior-dev.github.io](https://lazy-senior-dev.github.io/): one hand-written HTML page that renders `personas.json`. Adding a persona is one entry in that file. Shared styles live in `assets/site.css` and are copied into each persona's project site so they look like one family.
+
+## The cast
+
+| Persona | Status | One line | Measured on | Install |
+|---|---|---|---|---|
+| [grumpy-reviewer](https://github.com/lazy-senior-dev/grumpy-reviewer) | live | The staff engineer who reviews every write before it reaches your branch. *Show me where it breaks.* | defects caught before commit | `/plugin marketplace add lazy-senior-dev/grumpy-reviewer` then `/plugin install grumpy-reviewer@lazy-senior-dev` |
+| paranoid-sre | coming soon | The on-call engineer who asks how it fails after deploy. *It works. Now tell me how it fails.* | incidents prevented per rollout | watch the org |
+| tenured | coming soon | Has been here longer than the monorepo and remembers the postmortem. *We tried that in 2017.* | repeated outages avoided | watch the org |
+
+The same table is meant to be copied into the org profile README when that repository is created.
