@@ -16,26 +16,26 @@
     },
     {
       "id": "paranoid-sre",
-      "name": "paranoid-sre",
-      "status": "coming-soon",
+      "name": "The Paranoid SRE",
+      "status": "live",
       "tagline": "It works. Now tell me how it fails.",
       "role": "The on-call engineer who reviews what happens after deploy: probes, limits, rollouts, alerts, and the 3 a.m. page.",
       "measures": "incidents prevented per rollout",
       "repo": "https://github.com/lazy-senior-dev/paranoid-sre",
       "site": "https://lazy-senior-dev.github.io/paranoid-sre/",
-      "install": "",
+      "install": "/plugin marketplace add lazy-senior-dev/paranoid-sre\n/plugin install paranoid-sre@lazy-senior-dev",
       "sketch": "assets/paranoid-sre.svg"
     },
     {
       "id": "tenured",
-      "name": "tenured",
-      "status": "coming-soon",
+      "name": "Tenured",
+      "status": "live",
       "tagline": "We tried that in 2017.",
       "role": "The engineer who has been here longer than the monorepo and remembers the postmortem for the thing you are about to reintroduce.",
       "measures": "repeated outages avoided",
       "repo": "https://github.com/lazy-senior-dev/tenured",
       "site": "https://lazy-senior-dev.github.io/tenured/",
-      "install": "",
+      "install": "/plugin marketplace add lazy-senior-dev/tenured\n/plugin install tenured@lazy-senior-dev",
       "sketch": "assets/tenured.svg"
     }
   ]
