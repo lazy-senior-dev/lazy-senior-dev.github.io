@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="320" height="320" role="img" aria-labelledby="t d">
   <title id="t">The Grump</title>
-  <desc id="d">Line sketch of a grey-stubbled reviewer with reading glasses pushed up into his hair, frowning over a mug that says OKAYEST.</desc>
+  <desc id="d">Line sketch of a grey-stubbled reviewer with reading glasses pushed up into his hair, frowning over a mug that says NOT LGTM.</desc>
   <g fill="none" stroke="#000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
     <!-- shoulders and collar -->
     <path d="M 22 318 C 40 262, 92 250, 118 226"/>
@@ -261,5 +261,5 @@
     <path d="M 262 236 C 256 228, 268 222, 262 212" stroke-width="2"/>
     <path d="M 278 236 C 272 228, 284 222, 278 212" stroke-width="2"/>
   </g>
-  <text x="258" y="286" font-family="Menlo, Consolas, monospace" font-size="9" font-weight="700" text-anchor="middle" fill="#000">OKAYEST</text>
+  <text x="258" y="286" font-family="Menlo, Consolas, monospace" font-size="8.5" font-weight="700" text-anchor="middle" fill="#000">NOT LGTM</text>
 </svg>
