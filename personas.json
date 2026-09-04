@@ -24,7 +24,7 @@
       "repo": "https://github.com/lazy-senior-dev/paranoid-sre",
       "site": "",
       "install": "",
-      "sketch": ""
+      "sketch": "assets/paranoid-sre.svg"
     },
     {
       "id": "tenured",
@@ -36,7 +36,7 @@
       "repo": "https://github.com/lazy-senior-dev/tenured",
       "site": "",
       "install": "",
-      "sketch": ""
+      "sketch": "assets/tenured.svg"
     }
   ]
 }
