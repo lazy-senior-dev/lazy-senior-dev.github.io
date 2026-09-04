@@ -1,5 +1,7 @@
 # lazy-senior-dev.github.io
 
+**Live site:** https://lazy-senior-dev.github.io/
+
 The front door for [lazy-senior-dev](https://github.com/lazy-senior-dev): persona plugins that make an AI coding agent behave like a specific senior engineer with a specific job. A character changes how an agent behaves more than a list of rules does; this org builds a cast of them, one persona per repository, each benchmarked on the number that engineer cares about.
 
 This repository is the org site at [lazy-senior-dev.github.io](https://lazy-senior-dev.github.io/): one hand-written HTML page that renders `personas.json`. Adding a persona is one entry in that file. Shared styles live in `assets/site.css` and are copied into each persona's project site so they look like one family.
