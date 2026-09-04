@@ -21,7 +21,7 @@
       "tagline": "It works. Now tell me how it fails.",
       "role": "The on-call engineer who reviews what happens after deploy: probes, limits, rollouts, alerts, and the 3 a.m. page.",
       "measures": "incidents prevented per rollout",
-      "repo": "https://github.com/lazy-senior-dev",
+      "repo": "https://github.com/lazy-senior-dev/paranoid-sre",
       "site": "",
       "install": "",
       "sketch": ""
@@ -33,7 +33,7 @@
       "tagline": "We tried that in 2017.",
       "role": "The engineer who has been here longer than the monorepo and remembers the postmortem for the thing you are about to reintroduce.",
       "measures": "repeated outages avoided",
-      "repo": "https://github.com/lazy-senior-dev",
+      "repo": "https://github.com/lazy-senior-dev/tenured",
       "site": "",
       "install": "",
       "sketch": ""

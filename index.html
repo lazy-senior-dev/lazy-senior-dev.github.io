@@ -60,7 +60,7 @@
       <a href="https://github.com/agentcost">agentcost, a sibling org</a>
     </nav>
     <p>New personas are announced in Discussions and on the org page. No newsletter, no form; watch the org.</p>
-    <p class="small">MIT, Sandeep Bazar, 2026.</p>
+    <p class="small">Apache-2.0, Sandeep Bazar, 2026.</p>
   </footer>
 </main>
 <script>
@@ -73,7 +73,7 @@
     var install = p.install ? "<pre>" + esc(p.install) + "</pre>" : "";
     var links = live
       ? '<a href="' + esc(p.site) + '">Site</a><a href="' + esc(p.repo) + '">Repo</a>'
-      : '<a href="' + esc(p.repo) + '">Watch the org</a>';
+      : '<a href="' + esc(p.repo) + '">Repo (in progress)</a><a href="https://github.com/lazy-senior-dev">Watch the org</a>';
     return '<article class="persona ' + esc(p.status) + '">' +
       '<div class="sketch">' + sketch + "</div>" +
       '<span class="status ' + esc(p.status) + '">' + (live ? "live" : "coming soon") + "</span>" +

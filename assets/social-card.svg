@@ -8,5 +8,5 @@
     <text x="80" y="404" fill="#7a746b">paranoid-sre      the one who asks how it fails       soon</text>
     <text x="80" y="448" fill="#7a746b">tenured           the one who remembers 2017          soon</text>
   </g>
-  <text x="80" y="560" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="20" fill="#7a746b">One persona per plugin. Each measured on the thing that engineer cares about. MIT.</text>
+  <text x="80" y="560" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="20" fill="#7a746b">One persona per plugin. Each measured on the thing that engineer cares about. Apache-2.0.</text>
 </svg>
