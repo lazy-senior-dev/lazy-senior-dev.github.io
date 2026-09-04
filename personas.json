@@ -1,0 +1,42 @@
+{
+  "org": "lazy-senior-dev",
+  "tagline": "the senior engineers your AI agent can be",
+  "personas": [
+    {
+      "id": "grumpy-reviewer",
+      "name": "The Grump",
+      "status": "live",
+      "tagline": "Show me where it breaks.",
+      "role": "The staff engineer who reviews every write before it reaches your branch and blocks the merge when it should not happen.",
+      "measures": "defects caught before commit",
+      "repo": "https://github.com/lazy-senior-dev/grumpy-reviewer",
+      "site": "https://lazy-senior-dev.github.io/grumpy-reviewer/",
+      "install": "/plugin marketplace add lazy-senior-dev/grumpy-reviewer\n/plugin install grumpy-reviewer@lazy-senior-dev",
+      "sketch": "assets/grump.svg"
+    },
+    {
+      "id": "paranoid-sre",
+      "name": "paranoid-sre",
+      "status": "coming-soon",
+      "tagline": "It works. Now tell me how it fails.",
+      "role": "The on-call engineer who reviews what happens after deploy: probes, limits, rollouts, alerts, and the 3 a.m. page.",
+      "measures": "incidents prevented per rollout",
+      "repo": "https://github.com/lazy-senior-dev",
+      "site": "",
+      "install": "",
+      "sketch": ""
+    },
+    {
+      "id": "tenured",
+      "name": "tenured",
+      "status": "coming-soon",
+      "tagline": "We tried that in 2017.",
+      "role": "The engineer who has been here longer than the monorepo and remembers the postmortem for the thing you are about to reintroduce.",
+      "measures": "repeated outages avoided",
+      "repo": "https://github.com/lazy-senior-dev",
+      "site": "",
+      "install": "",
+      "sketch": ""
+    }
+  ]
+}
