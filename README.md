@@ -22,4 +22,4 @@ This repository is the org site at [lazy-senior-dev.github.io](https://lazy-seni
 $1`/plugin marketplace add lazy-senior-dev/paranoid-sre` then `/plugin install paranoid-sre@lazy-senior-dev` |
 $1`/plugin marketplace add lazy-senior-dev/tenured` then `/plugin install tenured@lazy-senior-dev` |
 
-Everything here is Apache-2.0; keep the NOTICE file when you redistribute. Built and maintained by [Sandeep Bazar](https://www.linkedin.com/in/sandeepbazar/). The same table is meant to be copied into the org profile README when that repository is created.
+Everything here is Apache-2.0; keep the NOTICE file when you redistribute. Built and maintained by [Sandeep Bazar](https://github.com/sandeepbazar). The same table is meant to be copied into the org profile README when that repository is created.
