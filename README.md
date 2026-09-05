@@ -1,3 +1,11 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://lazy-senior-dev.github.io/assets/hero/hero-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://lazy-senior-dev.github.io/assets/hero/hero-light.svg">
+    <img src="https://lazy-senior-dev.github.io/assets/hero/hero-light.svg" alt="lazy-senior-dev: three review personas and the measured drop in defects reaching the branch for each." width="880">
+  </picture>
+</p>
+
 # lazy-senior-dev.github.io
 
 **Live site:** https://lazy-senior-dev.github.io/

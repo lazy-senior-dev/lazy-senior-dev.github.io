@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 240" role="img" aria-label="lazy-senior-dev: three review personas — grumpy-reviewer, paranoid-sre and tenured — and the measured drop in defects reaching the branch for each.">
+  <style>
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+    .sans{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+    .xs{font-size:9.5px;letter-spacing:.08em}.num{font-size:21px;font-weight:700}
+    .cap{font-size:10px;font-weight:700;letter-spacing:.2em}
+    @keyframes ping{0%,100%{opacity:.3;r:4}50%{opacity:1;r:6}}
+    @keyframes rise{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+    @keyframes grow{0%{transform:scaleX(.06);opacity:.35}60%,100%{transform:scaleX(1);opacity:.85}}
+    .ping{animation:ping 2.2s ease-in-out infinite}
+    .card{animation:rise 5s ease-in-out infinite}.c1{animation-delay:.5s}.c2{animation-delay:1s}
+    .bar{animation:grow 3.6s ease-in-out infinite;transform-origin:left center}
+    .c1 .bar{animation-delay:.4s}.c2 .bar{animation-delay:.8s}
+    @media (prefers-reduced-motion:reduce){*{animation:none!important}}
+  </style>
+  <rect width="880" height="240" rx="18" fill="#fbfcff"/>
+  <text x="24" y="32" class="mono cap" fill="#5a6b8c">LAZY-SENIOR-DEV · THE REVIEW YOU KEEP SKIPPING</text>
+  <text x="24" y="52" class="sans" font-size="15" font-weight="700" fill="#0f1729">Three senior engineers who live inside your coding agent.</text>
+  
+    <g class="card c0">
+      <rect x="24" y="64" width="268" height="150" rx="14" fill="#ffffff" stroke="#dfe6f5"/>
+      <circle cx="58" cy="98" r="15" fill="#f59e0b" opacity=".18"/>
+      <circle class="ping" cx="58" cy="98" r="5" fill="#f59e0b"/>
+      <text x="84" y="95"  class="sans" font-size="14" font-weight="700" fill="#0f1729">grumpy-reviewer</text>
+      <text x="84" y="110" class="mono xs" fill="#5a6b8c">The Grump</text>
+      <text x="44" y="140" class="mono xs" fill="#5a6b8c">APPROVE  ·  REQUEST_CHANGES  ·  BLOCK</text>
+      <text x="44" y="176" class="mono num" fill="#f43f5e">22%</text>
+             <text x="90" y="176" class="mono num" fill="#5a6b8c">→</text>
+             <text x="114" y="176" class="mono num" fill="#22c55e">3%</text>
+             <text x="44" y="196" class="mono xs" fill="#5a6b8c">DEFECTS REACHING THE BRANCH</text>
+      <rect class="bar" x="44" y="204" width="228" height="3" rx="2" fill="#f59e0b" opacity=".5"/>
+    </g>
+    <g class="card c1">
+      <rect x="316" y="64" width="268" height="150" rx="14" fill="#ffffff" stroke="#dfe6f5"/>
+      <circle cx="350" cy="98" r="15" fill="#38bdf8" opacity=".18"/>
+      <circle class="ping" cx="350" cy="98" r="5" fill="#38bdf8"/>
+      <text x="376" y="95"  class="sans" font-size="14" font-weight="700" fill="#0f1729">paranoid-sre</text>
+      <text x="376" y="110" class="mono xs" fill="#5a6b8c">The Paranoid SRE</text>
+      <text x="336" y="140" class="mono xs" fill="#5a6b8c">SHIP  ·  HOLD  ·  PAGE</text>
+      <text x="336" y="176" class="mono num" fill="#f472b6">67%</text>
+             <text x="382" y="176" class="mono num" fill="#5a6b8c">→</text>
+             <text x="406" y="176" class="mono num" fill="#22c55e">0%</text>
+             <text x="336" y="196" class="mono xs" fill="#5a6b8c">DEFECTS REACHING THE BRANCH</text>
+      <rect class="bar" x="336" y="204" width="228" height="3" rx="2" fill="#38bdf8" opacity=".5"/>
+    </g>
+    <g class="card c2">
+      <rect x="608" y="64" width="268" height="150" rx="14" fill="#ffffff" stroke="#dfe6f5"/>
+      <circle cx="642" cy="98" r="15" fill="#a78bfa" opacity=".18"/>
+      <circle class="ping" cx="642" cy="98" r="5" fill="#a78bfa"/>
+      <text x="668" y="95"  class="sans" font-size="14" font-weight="700" fill="#0f1729">tenured</text>
+      <text x="668" y="110" class="mono xs" fill="#5a6b8c">Tenured</text>
+      <text x="628" y="140" class="mono xs" fill="#5a6b8c">NEW  ·  SEEN_BEFORE  ·  DO_NOT_REPEAT</text>
+      <text x="628" y="176" class="mono num" fill="#fb923c">19%</text>
+             <text x="674" y="176" class="mono num" fill="#5a6b8c">→</text>
+             <text x="698" y="176" class="mono num" fill="#22c55e">0%</text>
+             <text x="628" y="196" class="mono xs" fill="#5a6b8c">DEFECTS REACHING THE BRANCH</text>
+      <rect class="bar" x="628" y="204" width="228" height="3" rx="2" fill="#a78bfa" opacity=".5"/>
+    </g>
+</svg>
