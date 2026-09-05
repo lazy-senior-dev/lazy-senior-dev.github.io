@@ -101,7 +101,27 @@ ${s.sample.lines.join("\n")}
   if (note.refs?.length) md += `**Standards** ${note.refs.map((r) => (typeof r === "string" ? r : `[${r.t}](${r.u})`)).join(" · ")}\n\n`;
 }
 
-md += `## Adding to this catalogue
+md += `## What does not tell you an agent wrote it
+
+Several things people treat as tells did not survive contact with the records, and naming them
+matters as much as naming the signs.
+
+**Clean, consistent formatting.** Every arm produced it, including the ones that shipped defects. It
+separates nothing.
+
+**Thorough comments, or none at all.** Both appeared on defective and clean changes in these runs.
+
+**Speed.** The fastest arm was not the worst one. On the host with the most runs the unguarded agent
+was quickest and shipped the most defects, while the slowest arm shipped fewest; but on another host
+the ordering did not hold, so time is not a signal on its own.
+
+**Length.** Longer answers were not more defective. What did correlate, in the published research on
+this question, is unused and duplicated constructs rather than raw size.
+
+An accusation that code was written by an agent is not something this page can support, and it is not
+what the page is for. Every entry is a defect worth fixing whoever wrote it.
+
+## Adding to this catalogue
 
 A sign belongs here when an agent can be recorded producing it, not when it sounds plausible. To add
 one, open a task in the relevant repository's \`benchmarks/author/tasks/\` with a ticket, a scaffold,

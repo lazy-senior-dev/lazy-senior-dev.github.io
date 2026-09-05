@@ -7,7 +7,7 @@ Every entry here was produced by an agent during a benchmark run in one of the s
 not written from memory or imagined for illustration. The counts, the agents, and the code samples
 are read straight from the stored transcripts, so this page cannot drift away from its evidence. As
 of 2026-09-05 it covers **18 recurring mistakes** seen **66 times** across
-**805 recorded runs** on Claude Code, Codex CLI, IBM Bob Shell.
+**806 recorded runs** on Claude Code, Codex CLI, IBM Bob Shell.
 
 This is deliberately modelled on the community catalogues that document the tells of AI-written
 prose. The difference is that these entries are measured rather than observed: each one names how
@@ -456,6 +456,26 @@ log.info("Effective configuration: %s", config)
 **What to do instead.** Log an allow-list of keys, or redact by name before writing anything out.
 
 **Standards** [CWE-532: Insertion of sensitive information into log file](https://cwe.mitre.org/data/definitions/532.html) · [OWASP Logging Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html)
+
+## What does not tell you an agent wrote it
+
+Several things people treat as tells did not survive contact with the records, and naming them
+matters as much as naming the signs.
+
+**Clean, consistent formatting.** Every arm produced it, including the ones that shipped defects. It
+separates nothing.
+
+**Thorough comments, or none at all.** Both appeared on defective and clean changes in these runs.
+
+**Speed.** The fastest arm was not the worst one. On the host with the most runs the unguarded agent
+was quickest and shipped the most defects, while the slowest arm shipped fewest; but on another host
+the ordering did not hold, so time is not a signal on its own.
+
+**Length.** Longer answers were not more defective. What did correlate, in the published research on
+this question, is unused and duplicated constructs rather than raw size.
+
+An accusation that code was written by an agent is not something this page can support, and it is not
+what the page is for. Every entry is a defect worth fixing whoever wrote it.
 
 ## Adding to this catalogue
 
