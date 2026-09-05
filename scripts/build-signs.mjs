@@ -22,10 +22,16 @@ for (const repo of REPOS) {
   if (!existsSync(dir)) continue;
   const persona = JSON.parse(readFileSync(join(ROOT, repo, "persona.json"), "utf8"));
   for (const file of readdirSync(dir).filter((f) => f.endsWith(".jsonl"))) {
+    // One record per task, arm and run: a rerun appends rather than replacing, and counting the
+    // older rows too would inflate both the totals and every sign's frequency.
+    const byKey = new Map();
     for (const line of readFileSync(join(dir, file), "utf8").split("\n")) {
       if (!line.trim()) continue;
-      let r;
-      try { r = JSON.parse(line); } catch { continue; }
+      let rec;
+      try { rec = JSON.parse(line); } catch { continue; }
+      byKey.set(`${rec.task}|${rec.arm}|${rec.run}`, rec);
+    }
+    for (const r of byKey.values()) {
       if (r.error) continue;
       totalRuns++;
       if (!r.shipped) continue;

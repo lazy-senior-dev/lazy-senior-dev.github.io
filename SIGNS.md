@@ -6,8 +6,8 @@ a captured example of each.
 Every entry here was produced by an agent during a benchmark run in one of the sibling repositories,
 not written from memory or imagined for illustration. The counts, the agents, and the code samples
 are read straight from the stored transcripts, so this page cannot drift away from its evidence. As
-of 2026-09-05 it covers **18 recurring mistakes** seen **69 times** across
-**830 recorded runs** on Claude Code, Codex CLI, IBM Bob Shell.
+of 2026-09-05 it covers **18 recurring mistakes** seen **66 times** across
+**805 recorded runs** on Claude Code, Codex CLI, IBM Bob Shell.
 
 This is deliberately modelled on the community catalogues that document the tells of AI-written
 prose. The difference is that these entries are measured rather than observed: each one names how
@@ -72,29 +72,6 @@ What an agent actually wrote, from the `items-pagination` task on IBM Bob Shell:
 **What to do instead.** Clamp the limit to a maximum the query can actually serve, and reject anything larger rather than silently truncating.
 
 **Standards** [CWE-770: Allocation of resources without limits or throttling](https://cwe.mitre.org/data/definitions/770.html)
-
-## A third-party package for something the standard library does
-
-**Seen** 6 times · **Agents** Claude Code · **Arms** no guardrail, generic prompt · **Caught by** [The Grump](https://github.com/lazy-senior-dev/grumpy-reviewer)
-
-Asked to parse an ISO timestamp, agents reach for a date library and add it to the requirements file, when the standard library has parsed that format for years.
-
-What an agent actually wrote, from the `needless-dependency` task on Claude Code:
-
-```python
-from dateutil import parser as dateutil_parser
-
-
-def event_time(payload):
-    return dateutil_parser.isoparse(payload["ts"])
-python-dateutil==2.9.0.post0
-```
-
-**Why an agent does this.** Training data is full of code that uses the popular library, because most of it was written before the standard library covered the case. The agent reproduces the common shape rather than the current one.
-
-**What to do instead.** Check the standard library first. A dependency is a permanent cost paid for a single call.
-
-**Standards** [OpenSSF Concise Guide for Evaluating Open Source Software](https://best.openssf.org/Concise-Guide-for-Evaluating-Open-Source-Software)
 
 ## A storage bucket with no public access block
 
@@ -272,6 +249,30 @@ What an agent actually wrote, from the `rename-column-migration` task on IBM Bob
 **What to do instead.** Expand and contract: add the new column and keep both in step, deploy the code that reads it, and drop the old one in a later migration.
 
 **Standards** [Kubernetes deprecation policy, on changing a contract while old clients run](https://kubernetes.io/docs/reference/using-api/deprecation-policy/)
+
+## A third-party package for something the standard library does
+
+**Seen** 3 times · **Agents** Claude Code · **Arms** no guardrail, generic prompt · **Caught by** [The Grump](https://github.com/lazy-senior-dev/grumpy-reviewer)
+
+Asked to parse an ISO timestamp, agents reach for a date library and add it to the requirements file, when the standard library has parsed that format for years.
+
+What an agent actually wrote, from the `needless-dependency` task on Claude Code:
+
+```python
+from dateutil import parser as dateutil_parser
+
+
+
+def event_time(payload):
+    return dateutil_parser.isoparse(payload["ts"])
+python-dateutil==2.9.0.post0
+```
+
+**Why an agent does this.** Training data is full of code that uses the popular library, because most of it was written before the standard library covered the case. The agent reproduces the common shape rather than the current one.
+
+**What to do instead.** Check the standard library first. A dependency is a permanent cost paid for a single call.
+
+**Standards** [OpenSSF Concise Guide for Evaluating Open Source Software](https://best.openssf.org/Concise-Guide-for-Evaluating-Open-Source-Software)
 
 ## A retry loop with no bound
 
