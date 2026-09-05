@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 284" role="img" aria-label="Tenured: an agent's change flows through the persona, which refuses the write until the findings are fixed, so the branch stays clean.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 284" role="img" aria-label="The one who remembers: an agent's change flows through the persona, which refuses the write until the findings are fixed, so the branch stays clean.">
   <style>
     .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
     .sans{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
@@ -87,7 +87,7 @@
       <path d="M-7 -2 h14 M-7 5 h10" stroke="#e8ecf8" stroke-width="2.2" stroke-linecap="round" opacity=".7"/>
       <circle class="ping" r="3" cy="-24" fill="#fb923c"/>
     </g></g>
-  <text x="452" y="206" text-anchor="middle" class="sans" font-size="15" font-weight="700" fill="#e8ecf8">Tenured</text>
+  <text x="452" y="206" text-anchor="middle" class="sans" font-size="15" font-weight="700" fill="#e8ecf8">The one who remembers</text>
   <text x="452" y="222" text-anchor="middle" class="mono xs" fill="#93a4c8">REMEMBERS THE POSTMORTEM · ALWAYS ON</text>
   <rect x="584" y="80" width="272" height="132" rx="12" fill="none" stroke="#243154" opacity=".7"/>
   

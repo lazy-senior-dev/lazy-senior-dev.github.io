@@ -48,7 +48,7 @@
       <circle cx="642" cy="98" r="15" fill="#a78bfa" opacity=".18"/>
       <circle class="ping" cx="642" cy="98" r="5" fill="#a78bfa"/>
       <text x="668" y="95"  class="sans" font-size="14" font-weight="700" fill="#0f1729">tenured</text>
-      <text x="668" y="110" class="mono xs" fill="#5a6b8c">Tenured</text>
+      <text x="668" y="110" class="mono xs" fill="#5a6b8c">The one who remembers</text>
       <text x="628" y="140" class="mono xs" fill="#5a6b8c">NEW  ·  SEEN_BEFORE  ·  DO_NOT_REPEAT</text>
       <text x="628" y="176" class="mono num" fill="#fb923c">19%</text>
              <text x="674" y="176" class="mono num" fill="#5a6b8c">→</text>
