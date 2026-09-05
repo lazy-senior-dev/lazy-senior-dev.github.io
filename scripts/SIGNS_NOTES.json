@@ -7,7 +7,7 @@
     "instead": "Add a concurrency group keyed on the workflow and the branch, and put the job behind a protected environment. Both are two lines.",
     "refs": [
       {
-        "t": "OWASP CI/CD Security: Insufficient Flow Control Mechanisms (CICD-SEC-1)",
+        "t": "OWASP CI/CD Top 10, CICD-SEC-1 Insufficient Flow Control Mechanisms",
         "u": "https://owasp.org/www-project-top-10-ci-cd-security-risks/CICD-SEC-01-Insufficient-Flow-Control-Mechanisms"
       }
     ]
@@ -33,8 +33,12 @@
     "instead": "Check the standard library first. A dependency is a permanent cost paid for a single call.",
     "refs": [
       {
-        "t": "OpenSSF Concise Guide for Evaluating Open Source Software",
-        "u": "https://best.openssf.org/Concise-Guide-for-Evaluating-Open-Source-Software"
+        "t": "OWASP A03:2025 Software Supply Chain Failures",
+        "u": "https://owasp.org/Top10/2025/"
+      },
+      {
+        "t": "CWE-1357: Reliance on insufficiently trustworthy component",
+        "u": "https://cwe.mitre.org/data/definitions/1357.html"
       }
     ]
   },
@@ -48,6 +52,10 @@
       {
         "t": "CIS Amazon Web Services Foundations Benchmark",
         "u": "https://www.cisecurity.org/benchmark/amazon_web_services"
+      },
+      {
+        "t": "CWE-732: Incorrect permission assignment for critical resource",
+        "u": "https://cwe.mitre.org/data/definitions/732.html"
       }
     ]
   },
@@ -76,8 +84,8 @@
         "u": "https://cwe.mitre.org/data/definitions/798.html"
       },
       {
-        "t": "Kubernetes: good practices for Secrets",
-        "u": "https://kubernetes.io/docs/concepts/security/secrets-good-practices/"
+        "t": "OWASP Secrets Management Cheat Sheet",
+        "u": "https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html"
       }
     ]
   },
@@ -89,8 +97,12 @@
     "instead": "Set a deadline for a single run and a backoff limit for retries, and decide what happens to a run still going when the next one is due.",
     "refs": [
       {
-        "t": "Kubernetes CronJob: deadlines and backoff",
-        "u": "https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/"
+        "t": "CWE-400: Uncontrolled resource consumption",
+        "u": "https://cwe.mitre.org/data/definitions/400.html"
+      },
+      {
+        "t": "NIST SP 800-190, Application Container Security Guide",
+        "u": "https://csrc.nist.gov/pubs/sp/800/190/final"
       }
     ]
   },
@@ -106,6 +118,10 @@
         "u": "https://cwe.mitre.org/data/definitions/250.html"
       },
       {
+        "t": "NIST SP 800-190, Application Container Security Guide",
+        "u": "https://csrc.nist.gov/pubs/sp/800/190/final"
+      },
+      {
         "t": "CIS Docker Benchmark",
         "u": "https://www.cisecurity.org/benchmark/docker"
       }
@@ -119,8 +135,8 @@
     "instead": "Read the log for the lines you are about to change. A number that looks arbitrary usually is not.",
     "refs": [
       {
-        "t": "Google SRE: Addressing Cascading Failures",
-        "u": "https://sre.google/sre-book/addressing-cascading-failures/"
+        "t": "NIST SSDF RV.3.4, update the process so a root cause does not recur",
+        "u": "https://csrc.nist.gov/projects/ssdf"
       }
     ]
   },
@@ -149,8 +165,8 @@
         "u": "https://cwe.mitre.org/data/definitions/770.html"
       },
       {
-        "t": "Google SRE: Addressing Cascading Failures",
-        "u": "https://sre.google/sre-book/addressing-cascading-failures/"
+        "t": "CWE-1088: Synchronous access of remote resource without timeout",
+        "u": "https://cwe.mitre.org/data/definitions/1088.html"
       }
     ]
   },
@@ -162,8 +178,8 @@
     "instead": "Turn on deletion protection and require a final snapshot for anything holding production data.",
     "refs": [
       {
-        "t": "Google SRE: Reliable Product Launches at Scale",
-        "u": "https://sre.google/sre-book/reliable-product-launches/"
+        "t": "NIST SSDF PS.3, archive and protect each release",
+        "u": "https://csrc.nist.gov/projects/ssdf"
       }
     ]
   },
@@ -179,8 +195,8 @@
         "u": "https://cwe.mitre.org/data/definitions/639.html"
       },
       {
-        "t": "OWASP Top 10: A01 Broken Access Control",
-        "u": "https://owasp.org/Top10/A01_2021-Broken_Access_Control/"
+        "t": "OWASP A01:2025 Broken Access Control",
+        "u": "https://owasp.org/Top10/2025/"
       }
     ]
   },
@@ -193,7 +209,7 @@
     "refs": [
       {
         "t": "Semantic Versioning, on changing a public contract",
-        "u": "https://semver.org/"
+        "u": "https://semver.org/spec/v2.0.0.html"
       }
     ]
   },
@@ -205,8 +221,8 @@
     "instead": "Before changing a default, read why it holds that value. Reverts are written down.",
     "refs": [
       {
-        "t": "Google SRE: Postmortem Culture",
-        "u": "https://sre.google/sre-book/postmortem-culture/"
+        "t": "NIST SSDF RV.3.2, analyse root causes over time to identify patterns",
+        "u": "https://csrc.nist.gov/projects/ssdf"
       }
     ]
   },
@@ -231,12 +247,12 @@
     "instead": "Never build a shell command from caller input. Pass arguments as a list, without a shell.",
     "refs": [
       {
-        "t": "CWE-78: Improper neutralization of special elements used in an OS command",
+        "t": "CWE-78: OS command injection",
         "u": "https://cwe.mitre.org/data/definitions/78.html"
       },
       {
-        "t": "OWASP Top 10: A03 Injection",
-        "u": "https://owasp.org/Top10/A03_2021-Injection/"
+        "t": "OWASP A05:2025 Injection",
+        "u": "https://owasp.org/Top10/2025/"
       }
     ]
   },
@@ -252,8 +268,8 @@
         "u": "https://cwe.mitre.org/data/definitions/532.html"
       },
       {
-        "t": "OWASP Logging Cheat Sheet",
-        "u": "https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html"
+        "t": "OWASP A09:2025 Security Logging and Alerting Failures",
+        "u": "https://owasp.org/Top10/2025/"
       }
     ]
   }

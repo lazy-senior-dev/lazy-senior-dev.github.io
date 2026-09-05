@@ -7,7 +7,7 @@ Every entry here was produced by an agent during a benchmark run in one of the s
 not written from memory or imagined for illustration. The counts, the agents, and the code samples
 are read straight from the stored transcripts, so this page cannot drift away from its evidence. As
 of 2026-09-05 it covers **18 recurring mistakes** seen **66 times** across
-**806 recorded runs** on Claude Code, Codex CLI, IBM Bob Shell.
+**808 recorded runs** on Claude Code, Codex CLI, IBM Bob Shell.
 
 This is deliberately modelled on the community catalogues that document the tells of AI-written
 prose. The difference is that these entries are measured rather than observed: each one names how
@@ -47,7 +47,7 @@ jobs:
 
 **What to do instead.** Add a concurrency group keyed on the workflow and the branch, and put the job behind a protected environment. Both are two lines.
 
-**Standards** [OWASP CI/CD Security: Insufficient Flow Control Mechanisms (CICD-SEC-1)](https://owasp.org/www-project-top-10-ci-cd-security-risks/CICD-SEC-01-Insufficient-Flow-Control-Mechanisms)
+**Standards** [OWASP CI/CD Top 10, CICD-SEC-1 Insufficient Flow Control Mechanisms](https://owasp.org/www-project-top-10-ci-cd-security-risks/CICD-SEC-01-Insufficient-Flow-Control-Mechanisms)
 
 ## A page size with no upper bound
 
@@ -100,7 +100,7 @@ resource "aws_s3_bucket_lifecycle_configuration" "db_dumps" {
 
 **What to do instead.** Attach a public access block to every bucket at creation. It costs four lines and removes an entire class of later accident.
 
-**Standards** [CIS Amazon Web Services Foundations Benchmark](https://www.cisecurity.org/benchmark/amazon_web_services)
+**Standards** [CIS Amazon Web Services Foundations Benchmark](https://www.cisecurity.org/benchmark/amazon_web_services) · [CWE-732: Incorrect permission assignment for critical resource](https://cwe.mitre.org/data/definitions/732.html)
 
 ## A secret compared with ==
 
@@ -143,7 +143,7 @@ What an agent actually wrote, from the `provider-key` task on IBM Bob Shell:
 
 **What to do instead.** Reference a secret rather than a value, and let the platform inject it.
 
-**Standards** [CWE-798: Use of hard-coded credentials](https://cwe.mitre.org/data/definitions/798.html) · [Kubernetes: good practices for Secrets](https://kubernetes.io/docs/concepts/security/secrets-good-practices/)
+**Standards** [CWE-798: Use of hard-coded credentials](https://cwe.mitre.org/data/definitions/798.html) · [OWASP Secrets Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html)
 
 ## A scheduled job with no deadline
 
@@ -172,7 +172,7 @@ spec:
 
 **What to do instead.** Set a deadline for a single run and a backoff limit for retries, and decide what happens to a run still going when the next one is due.
 
-**Standards** [Kubernetes CronJob: deadlines and backoff](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/)
+**Standards** [CWE-400: Uncontrolled resource consumption](https://cwe.mitre.org/data/definitions/400.html) · [NIST SP 800-190, Application Container Security Guide](https://csrc.nist.gov/pubs/sp/800/190/final)
 
 ## A container that runs as root on a moving base
 
@@ -199,7 +199,7 @@ CMD ["python", "-m", "worker"]
 
 **What to do instead.** Create a user and switch to it before the entry point, and pin the base image to a digest or an immutable tag.
 
-**Standards** [CWE-250: Execution with unnecessary privileges](https://cwe.mitre.org/data/definitions/250.html) · [CIS Docker Benchmark](https://www.cisecurity.org/benchmark/docker)
+**Standards** [CWE-250: Execution with unnecessary privileges](https://cwe.mitre.org/data/definitions/250.html) · [NIST SP 800-190, Application Container Security Guide](https://csrc.nist.gov/pubs/sp/800/190/final) · [CIS Docker Benchmark](https://www.cisecurity.org/benchmark/docker)
 
 ## Removing a limit that an incident put there
 
@@ -219,7 +219,7 @@ const maxGetAttempts = 10
 
 **What to do instead.** Read the log for the lines you are about to change. A number that looks arbitrary usually is not.
 
-**Standards** [Google SRE: Addressing Cascading Failures](https://sre.google/sre-book/addressing-cascading-failures/)
+**Standards** [NIST SSDF RV.3.4, update the process so a root cause does not recur](https://csrc.nist.gov/projects/ssdf)
 
 ## Renaming a column the running code still reads
 
@@ -272,7 +272,7 @@ python-dateutil==2.9.0.post0
 
 **What to do instead.** Check the standard library first. A dependency is a permanent cost paid for a single call.
 
-**Standards** [OpenSSF Concise Guide for Evaluating Open Source Software](https://best.openssf.org/Concise-Guide-for-Evaluating-Open-Source-Software)
+**Standards** [OWASP A03:2025 Software Supply Chain Failures](https://owasp.org/Top10/2025/) · [CWE-1357: Reliance on insufficiently trustworthy component](https://cwe.mitre.org/data/definitions/1357.html)
 
 ## A retry loop with no bound
 
@@ -298,7 +298,7 @@ def get_with_retry(client, key):
 
 **What to do instead.** Bound every retry loop by attempts or by a deadline, and back off between attempts.
 
-**Standards** [CWE-770: Allocation of resources without limits or throttling](https://cwe.mitre.org/data/definitions/770.html) · [Google SRE: Addressing Cascading Failures](https://sre.google/sre-book/addressing-cascading-failures/)
+**Standards** [CWE-770: Allocation of resources without limits or throttling](https://cwe.mitre.org/data/definitions/770.html) · [CWE-1088: Synchronous access of remote resource without timeout](https://cwe.mitre.org/data/definitions/1088.html)
 
 ## A production database with its safety off
 
@@ -325,7 +325,7 @@ resource "aws_db_instance" "postgres" {
 
 **What to do instead.** Turn on deletion protection and require a final snapshot for anything holding production data.
 
-**Standards** [Google SRE: Reliable Product Launches at Scale](https://sre.google/sre-book/reliable-product-launches/)
+**Standards** [NIST SSDF PS.3, archive and protect each release](https://csrc.nist.gov/projects/ssdf)
 
 ## A destructive endpoint with no ownership check
 
@@ -351,7 +351,7 @@ def delete_account(account_id):
 
 **What to do instead.** Authorise every destructive route against the caller's identity, never against the identifier in the request.
 
-**Standards** [CWE-639: Authorization bypass through user-controlled key](https://cwe.mitre.org/data/definitions/639.html) · [OWASP Top 10: A01 Broken Access Control](https://owasp.org/Top10/A01_2021-Broken_Access_Control/)
+**Standards** [CWE-639: Authorization bypass through user-controlled key](https://cwe.mitre.org/data/definitions/639.html) · [OWASP A01:2025 Broken Access Control](https://owasp.org/Top10/2025/)
 
 ## Changing a function's shape and leaving its callers behind
 
@@ -370,7 +370,7 @@ What an agent actually wrote, from the `caller-not-updated` task on Codex CLI:
 
 **What to do instead.** Search for the callers before changing a signature, and update them in the same change or keep the old shape working.
 
-**Standards** [Semantic Versioning, on changing a public contract](https://semver.org/)
+**Standards** [Semantic Versioning, on changing a public contract](https://semver.org/spec/v2.0.0.html)
 
 ## Turning a flag back on that an incident turned off
 
@@ -388,7 +388,7 @@ What an agent actually wrote, from the `batch-checkout-flag` task on IBM Bob She
 
 **What to do instead.** Before changing a default, read why it holds that value. Reverts are written down.
 
-**Standards** [Google SRE: Postmortem Culture](https://sre.google/sre-book/postmortem-culture/)
+**Standards** [NIST SSDF RV.3.2, analyse root causes over time to identify patterns](https://csrc.nist.gov/projects/ssdf)
 
 ## Copying a staging config into production
 
@@ -437,7 +437,7 @@ def _is_valid_hostname(hostname: str) -> bool:
 
 **What to do instead.** Never build a shell command from caller input. Pass arguments as a list, without a shell.
 
-**Standards** [CWE-78: Improper neutralization of special elements used in an OS command](https://cwe.mitre.org/data/definitions/78.html) · [OWASP Top 10: A03 Injection](https://owasp.org/Top10/A03_2021-Injection/)
+**Standards** [CWE-78: OS command injection](https://cwe.mitre.org/data/definitions/78.html) · [OWASP A05:2025 Injection](https://owasp.org/Top10/2025/)
 
 ## Logging the configuration, secrets and all
 
@@ -455,7 +455,7 @@ log.info("Effective configuration: %s", config)
 
 **What to do instead.** Log an allow-list of keys, or redact by name before writing anything out.
 
-**Standards** [CWE-532: Insertion of sensitive information into log file](https://cwe.mitre.org/data/definitions/532.html) · [OWASP Logging Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html)
+**Standards** [CWE-532: Insertion of sensitive information into log file](https://cwe.mitre.org/data/definitions/532.html) · [OWASP A09:2025 Security Logging and Alerting Failures](https://owasp.org/Top10/2025/)
 
 ## What does not tell you an agent wrote it
 
