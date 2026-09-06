@@ -1,0 +1,8 @@
+# Every page here is meant to be indexed; there is nothing private on this host.
+User-agent: *
+Allow: /
+
+Sitemap: https://lazy-senior-dev.github.io/sitemap.xml
+Sitemap: https://lazy-senior-dev.github.io/grumpy-reviewer/sitemap.xml
+Sitemap: https://lazy-senior-dev.github.io/paranoid-sre/sitemap.xml
+Sitemap: https://lazy-senior-dev.github.io/tenured/sitemap.xml
