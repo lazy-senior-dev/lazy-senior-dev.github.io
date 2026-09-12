@@ -24,9 +24,9 @@
       <text x="84" y="95"  class="sans" font-size="14" font-weight="700" fill="#e8ecf8">grumpy-reviewer</text>
       <text x="84" y="110" class="mono xs" fill="#93a4c8">The Grump</text>
       <text x="44" y="140" class="mono xs" fill="#93a4c8">APPROVE  ·  REQUEST_CHANGES  ·  BLOCK</text>
-      <text x="44" y="176" class="mono num" fill="#f43f5e">31%</text>
+      <text x="44" y="176" class="mono num" fill="#f43f5e">18%</text>
              <text x="90" y="176" class="mono num" fill="#93a4c8">→</text>
-             <text x="114" y="176" class="mono num" fill="#22c55e">6%</text>
+             <text x="114" y="176" class="mono num" fill="#22c55e">0%</text>
              <text x="44" y="196" class="mono xs" fill="#93a4c8">DEFECTS REACHING THE BRANCH</text>
       <rect class="bar" x="44" y="204" width="228" height="3" rx="2" fill="#f59e0b" opacity=".5"/>
     </g>
@@ -37,9 +37,9 @@
       <text x="376" y="95"  class="sans" font-size="14" font-weight="700" fill="#e8ecf8">paranoid-sre</text>
       <text x="376" y="110" class="mono xs" fill="#93a4c8">The Paranoid SRE</text>
       <text x="336" y="140" class="mono xs" fill="#93a4c8">SHIP  ·  HOLD  ·  PAGE</text>
-      <text x="336" y="176" class="mono num" fill="#f472b6">67%</text>
+      <text x="336" y="176" class="mono num" fill="#f472b6">60%</text>
              <text x="382" y="176" class="mono num" fill="#93a4c8">→</text>
-             <text x="406" y="176" class="mono num" fill="#22c55e">6%</text>
+             <text x="406" y="176" class="mono num" fill="#22c55e">0%</text>
              <text x="336" y="196" class="mono xs" fill="#93a4c8">DEFECTS REACHING THE BRANCH</text>
       <rect class="bar" x="336" y="204" width="228" height="3" rx="2" fill="#38bdf8" opacity=".5"/>
     </g>
@@ -50,7 +50,7 @@
       <text x="668" y="95"  class="sans" font-size="14" font-weight="700" fill="#e8ecf8">tenured</text>
       <text x="668" y="110" class="mono xs" fill="#93a4c8">The one who remembers</text>
       <text x="628" y="140" class="mono xs" fill="#93a4c8">NEW  ·  SEEN_BEFORE  ·  DO_NOT_REPEAT</text>
-      <text x="628" y="176" class="mono num" fill="#fb923c">25%</text>
+      <text x="628" y="176" class="mono num" fill="#fb923c">10%</text>
              <text x="674" y="176" class="mono num" fill="#93a4c8">→</text>
              <text x="698" y="176" class="mono num" fill="#22c55e">0%</text>
              <text x="628" y="196" class="mono xs" fill="#93a4c8">DEFECTS REACHING THE BRANCH</text>
